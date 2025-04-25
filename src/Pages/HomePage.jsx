@@ -207,6 +207,68 @@ const HomePage = () => {
     ))}
   </div>
 </section>
+<section className="bg-gradient-to-b from-black via-gray-900 to-black py-16 px-6 text-white font-serif">
+<div className="text-center mb-12">
+  <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">
+    What Our Travelers Say
+  </h2>
+  <p className="text-lg md:text-xl mt-4 max-w-2xl mx-auto text-gray-300">
+    Hear from some of our delighted explorers who’ve uncovered the magic of Odisha with us.
+  </p>
+  <p className="text-md md:text-lg mt-3 max-w-3xl mx-auto text-gray-400 italic">
+    Whether it’s the spiritual serenity of ancient temples or the golden sunsets over quiet beaches, these real stories reflect the unforgettable moments our travelers experienced. Their words speak louder than ours.
+  </p>
+  <p className="text-md md:text-base mt-6 text-gray-500">
+    We believe in crafting journeys that are more than just vacations — they’re lifelong memories.
+  </p>
+</div>
+
+
+  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    {[
+      {
+        // name: "Priya Sharma",
+        location: "Delhi, India",
+        feedback:
+          "An unforgettable experience! From the serenity of Chilika Lake to the grandeur of Konark Sun Temple — everything was perfectly arranged.",
+        // img: "https://randomuser.me/api/portraits/women/44.jpg"
+      },
+      {
+        // name: "Rahul Mehta",
+        location: "Mumbai, India",
+        feedback:
+          "I never imagined Odisha had so much beauty to offer. The entire trip was smooth, scenic, and absolutely memorable!",
+        // img: "https://randomuser.me/api/portraits/men/32.jpg"
+      },
+      {
+        // name: "Anjali Desai",
+        location: "Ahmedabad, India",
+        feedback:
+          "Highly recommended! The guides were knowledgeable, the stays were cozy, and I felt connected to the roots of Indian culture.",
+        // img: "https://randomuser.me/api/portraits/women/68.jpg"
+      }
+    ].map((testimonial, index) => (
+      <div
+        key={index}
+        className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-gray-700 hover:scale-105 transition-transform duration-300"
+      >
+        <div className="flex items-center gap-4 mb-4">
+          <img
+            src={testimonial.img}
+            alt={testimonial.name}
+            className="w-12 h-12 rounded-full border-2 border-yellow-400"
+          />
+          <div>
+            <h4 className="text-lg font-bold text-yellow-300">{testimonial.name}</h4>
+            <p className="text-sm text-gray-300">{testimonial.location}</p>
+          </div>
+        </div>
+        <p className="text-gray-200 italic">“{testimonial.feedback}”</p>
+      </div>
+    ))}
+  </div>
+</section>
+
     <Footer/>
 
     </>
