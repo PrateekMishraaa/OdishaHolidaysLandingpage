@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Components/Navbar';
 import BannerNine from "../assets/banner9.jpg";
 import About1 from "../assets/about-us.jpg";
@@ -14,7 +14,46 @@ import { MdFlight } from "react-icons/md";
 import { PiStudent } from "react-icons/pi";
 import Footer from '../Components/Footer';
 import { MdGroups } from "react-icons/md";
+import { toast, ToastContainer } from 'react-toastify';
+import axios from "axios"
+import 'react-toastify/dist/ReactToastify.css';
 const HomePage = () => {
+    const [formData,setFormData] = useState({
+    name:"",
+    email:"",
+    message:""
+    })
+    const handleChange = (e)=>{
+        setFormData({...formData,[e.target.name]:e.target.value})
+    }
+    console.log(handleChange);
+
+
+    const handleSubmit = async (e) => {
+        e.preventDefault(); // Fixed typo from prevantDefault to preventDefault
+    
+        if (!formData.name || !formData.email || !formData.message) {
+            toast.error("All fields are required");
+            return; // Added return to stop execution if fields are missing
+        }
+    
+        try {
+            const response = await axios.post("http://localhost:4000/api/sendmail", formData, {
+                headers: {
+                    "Content-Type": "application/json", // Fixed header key and value
+                },
+            });
+    
+            toast.success("Message sent successfully!");
+            // Optionally reset form here
+            // setFormData({ name: "", email: "", message: "" });
+    
+        } catch (error) {
+            console.error(error);
+            toast.error("Something went wrong");
+        }
+    };
+    
     return (
         <>
             <Navbar />
@@ -336,6 +375,64 @@ const HomePage = () => {
                     </a>
                 </div>
             </section>
+            <section className="h-screen w-full bg-[#f3ece3] flex items-center justify-center">
+  <div className="bg-white shadow-2xl rounded-2xl p-10 w-[90%] max-w-xl">
+    <h2 className="text-3xl font-bold text-center text-[#333] mb-8">Contact Us</h2>
+    <form onSubmit={handleSubmit} className="space-y-6">
+      <div>
+        <label htmlFor="name" className="block text-sm font-medium text-gray-900">
+          Name
+        </label>
+        <input
+          type="text"
+          id="name"
+          name='name'
+          value={formData.name}
+          onChange={handleChange}
+          className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-[#c89f70] focus:border-[#c89f70]"
+          placeholder="Your Name"
+        />
+      </div>
+      <div>
+        <label htmlFor="email" className="block text-sm font-medium text-gray-900">
+          Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          name='email'
+          value={formData.email}
+          onChange={handleChange}
+          className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-[#c89f70] focus:border-[#c89f70]"
+          placeholder="you@example.com"
+        />
+      </div>
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-gray-900">
+          Message
+        </label>
+        <textarea
+          id="message"
+          rows="4"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-[#c89f70] focus:border-[#c89f70]"
+          placeholder="Write your message..."
+        ></textarea>
+      </div>
+      <div className="flex justify-center">
+        <button
+          type="submit"
+          className="px-6 py-2 bg-[#c89f70] text-white rounded-lg hover:bg-[#b68558] transition duration-300"
+        >
+          Send Message
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
             <section className="w-full bg-gradient-to-r from-purple-900 via-indigo-900 to-black py-16 px-6 text-white font-serif">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-pink-400 to-red-400 mb-6">
@@ -359,9 +456,9 @@ const HomePage = () => {
                     </p>
                 </div>
             </section>
-
+                
             <Footer />
-
+                    <ToastContainer/>
         </>
     );
 };
