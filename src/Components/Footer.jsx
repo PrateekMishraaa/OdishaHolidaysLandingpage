@@ -27,7 +27,7 @@ const Footer = () => {
                     </div>
                     <div className='flex items-center gap-2'>
                         <IoCallOutline className='text-green-500 text-lg' />
-                        <p className='text-sm'>+91 9971834101</p>
+                        <a href='' className='text-sm'>+91 9971834101</a>
                     </div>
                     <div className='flex items-center gap-2'>
                         <IoCallOutline className='text-green-500 text-lg' />

@@ -20,27 +20,27 @@ const HomePage = () => {
             <Navbar />
 
             <section
-  className="relative min-h-screen w-full bg-cover bg-center"
-  style={{ backgroundImage: `url(${Banner})` }}
->
-  {/* Semi-transparent overlay */}
-  <div className="absolute inset-0  bg-opacity-60 z-0" />
+                className="relative min-h-screen w-full bg-cover bg-center"
+                style={{ backgroundImage: `url(${BannerEight})` }}
+            >
+                {/* Semi-transparent overlay */}
+                <div className="absolute inset-0  bg-opacity-60 z-0" />
 
-  {/* Text Content */}
-  <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4 sm:px-8">
-    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 px-4 py-2 sm:px-6 sm:py-4 rounded-2xl w-full max-w-3xl transition-transform duration-300 cursor-pointer hover:scale-105">
-      Welcome to Odisha Holidays
-    </h1>
+                {/* Text Content */}
+                <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4 sm:px-8">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-purple-700 to-pink-800 px-4 py-2 sm:px-6 sm:py-4 rounded-2xl w-full max-w-3xl transition-transform duration-300 cursor-pointer hover:scale-105">
+                        Welcome to Odisha Holidays
+                    </h1>
 
-    <p className="text-base sm:text-lg md:text-xl font-serif font-medium leading-relaxed max-w-xl sm:max-w-2xl px-4 py-4  bg-opacity-10 text-white rounded-2xl border border-blue-400 shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-opacity-20">
-      Discover the enchanting beauty of Odisha, India – explore its rich cultural heritage, pristine beaches, ancient temples, and vibrant festivals for an unforgettable travel experience.
-    </p>
-  </div>
-</section>
+                    <p className="text-base sm:text-lg md:text-xl font-serif font-medium leading-relaxed max-w-xl sm:max-w-2xl px-4 py-4  bg-opacity-10 text-white rounded-2xl border border-blue-400 shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-opacity-20">
+                        Discover the enchanting beauty of Odisha, India – explore its rich cultural heritage, pristine beaches, ancient temples, and vibrant festivals for an unforgettable travel experience.
+                    </p>
+                </div>
+            </section>
 
 
             {/* About Us Section */}
-            <section className="min-h-[50vh] w-full bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 p-10">
+            <section className="min-h-[50vh] w-full bg-[#f3ece3] p-10">
                 <div className="w-full h-auto cursor-pointer bg-black text-blue-900 p-8 rounded-2xl shadow-lg hover:bg-gray-900 hover:text-yellow-400 text-white transition">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500 mb-6 font-serif">
                         About Odisha Holidays
@@ -195,8 +195,8 @@ const HomePage = () => {
                                             key={starIndex}
                                             xmlns="http://www.w3.org/2000/svg"
                                             className={`h-5 w-5 ${starIndex < Math.floor(dest.rating)
-                                                    ? "text-yellow-600"
-                                                    : "text-gray-800"
+                                                ? "text-yellow-600"
+                                                : "text-gray-800"
                                                 }`}
                                             fill="currentColor"
                                             viewBox="0 0 20 20"
@@ -211,18 +211,18 @@ const HomePage = () => {
                     ))}
                 </div>
             </section>
-            <section className="bg-gradient-to-b from-black via-gray-900 to-black py-16 px-6 text-white font-serif">
+            <section className="bg[#f3ece3]gradient-to-b from-black via-gray-900 to-black py-16 px-6 text-white font-serif">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">
+                    <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-800 to-pink-900">
                         What Our Travelers Say
                     </h2>
-                    <p className="text-lg md:text-xl mt-4 max-w-2xl mx-auto text-gray-300">
+                    <p className="text-lg md:text-xl mt-4 max-w-2xl mx-auto text-gray-900">
                         Hear from some of our delighted explorers who’ve uncovered the magic of Odisha with us.
                     </p>
-                    <p className="text-md md:text-lg mt-3 max-w-3xl mx-auto text-gray-400 italic">
+                    <p className="text-md md:text-lg mt-3 max-w-3xl mx-auto text-gray-900 italic">
                         Whether it’s the spiritual serenity of ancient temples or the golden sunsets over quiet beaches, these real stories reflect the unforgettable moments our travelers experienced. Their words speak louder than ours.
                     </p>
-                    <p className="text-md md:text-base mt-6 text-gray-500">
+                    <p className="text-md md:text-base mt-6 text-gray-900">
                         We believe in crafting journeys that are more than just vacations — they’re lifelong memories.
                     </p>
                 </div>
@@ -263,11 +263,11 @@ const HomePage = () => {
                                     className="w-12 h-12 rounded-full border-2 border-yellow-400"
                                 />
                                 <div>
-                                    <h4 className="text-lg font-bold text-yellow-300">{testimonial.name}</h4>
-                                    <p className="text-sm text-gray-300">{testimonial.location}</p>
+                                    <h4 className="text-lg font-bold text-gray-900">{testimonial.name}</h4>
+                                    <p className="text-sm text-gray-900">{testimonial.location}</p>
                                 </div>
                             </div>
-                            <p className="text-gray-200 italic">“{testimonial.feedback}”</p>
+                            <p className="text-gray-900 italic">“{testimonial.feedback}”</p>
                         </div>
                     ))}
                 </div>
@@ -288,7 +288,7 @@ const HomePage = () => {
                         <div className="text-4xl text-yellow-400 mb-4 text-center">🚌</div>
                         <h3 className="text-2xl font-bold text-center mb-2 text-slate-900">Odisha Tour Packages</h3>
                         <p className="text-sm text-center text-blue-700 font-semibold">
-                        Explore the best Odisha tour packages with scenic beauty, cultural experiences, and unforgettable memories. Book your Odisha holidays today!
+                            Explore the best Odisha tour packages with scenic beauty, cultural experiences, and unforgettable memories. Book your Odisha holidays today!
                         </p>
                     </div>
 
@@ -296,7 +296,7 @@ const HomePage = () => {
                         <div className="text-4xl text-green-400 mb-4 text-center">🏨</div>
                         <h3 className="text-2xl font-bold text-center mb-2 text-slate-900">Hotel Bookings</h3>
                         <p className="text-sm text-center text-blue-700 font-semibold">
-                        Find top hotel bookings for a comfortable stay with great amenities. Discover the best hotels for your next trip to Odisha and beyond.
+                            Find top hotel bookings for a comfortable stay with great amenities. Discover the best hotels for your next trip to Odisha and beyond.
                         </p>
                     </div>
 
@@ -304,28 +304,28 @@ const HomePage = () => {
                         <div className="text-4xl text-pink-400 mb-4 text-center">🚗</div>
                         <h3 className="text-2xl font-bold text-center mb-2 text-gray-900">Cab Bookings</h3>
                         <p className="text-sm text-center text-blue-700 font-semibold">
-                        Get reliable and affordable cab bookings for sightseeing, airport transfers, and local commutes. Choose the best cab service for your trip.
+                            Get reliable and affordable cab bookings for sightseeing, airport transfers, and local commutes. Choose the best cab service for your trip.
                         </p>
                     </div>
                     <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-gray-600 hover:scale-105 transition-transform duration-300 shadow-lg">
-                        <div className="text-4xl text-pink-400 mb-4 text-center"><MdFlight className='ml-36'/></div>
+                        <div className="text-4xl text-pink-400 mb-4 text-center"><MdFlight className='ml-36' /></div>
                         <h3 className="text-2xl font-bold text-center mb-2 text-gray-900">Air Ticket</h3>
                         <p className="text-sm text-center text-blue-700 font-semibold">
-                        Book affordable air tickets to Odisha and major Indian cities. Get the best flight deals with our easy booking process for both domestic and international flights.
+                            Book affordable air tickets to Odisha and major Indian cities. Get the best flight deals with our easy booking process for both domestic and international flights.
                         </p>
                     </div>
                     <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-gray-600 hover:scale-105 transition-transform duration-300 shadow-lg">
-                    <div className="text-4xl text-orange-400 mb-4 text-center"><PiStudent className='ml-36'/></div>
+                        <div className="text-4xl text-orange-400 mb-4 text-center"><PiStudent className='ml-36' /></div>
                         <h3 className="text-2xl font-bold text-center mb-2 text-gray-900">Students Group</h3>
                         <p className="text-sm text-center text-blue-700 font-semibold">
-                        Plan group tours for students with special discounts. Discover tailor-made travel packages for student groups visiting Odisha for educational purposes.
+                            Plan group tours for students with special discounts. Discover tailor-made travel packages for student groups visiting Odisha for educational purposes.
                         </p>
                     </div>
                     <div className="bg-white bg-opacity-10 backdrop-blur-lg rounded-xl p-6 border border-gray-600 hover:scale-105 transition-transform duration-300 shadow-lg">
-                    <div className="text-4xl text-green-700 mb-4 text-center"><MdGroups className='ml-36'/></div>
+                        <div className="text-4xl text-green-700 mb-4 text-center"><MdGroups className='ml-36' /></div>
                         <h3 className="text-2xl font-bold text-center mb-2 text-gray-900">MICE-GROUPS</h3>
                         <p className="text-sm text-center text-blue-700 font-semibold">
-                        Book MICE (Meetings, Incentives, Conferences, and Exhibitions) group packages for your business needs. Get corporate travel services for seamless business events.
+                            Book MICE (Meetings, Incentives, Conferences, and Exhibitions) group packages for your business needs. Get corporate travel services for seamless business events.
                         </p>
                     </div>
                 </div>
@@ -337,28 +337,28 @@ const HomePage = () => {
                 </div>
             </section>
             <section className="w-full bg-gradient-to-r from-purple-900 via-indigo-900 to-black py-16 px-6 text-white font-serif">
-  <div className="max-w-4xl mx-auto text-center">
-    <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-pink-400 to-red-400 mb-6">
-      Want to Know More?
-    </h2>
-    <p className="text-lg md:text-xl text-gray-300 mb-8">
-      Explore detailed information, packages, gallery, and personalized services by visiting our official website.
-    </p>
+                <div className="max-w-4xl mx-auto text-center">
+                    <h2 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-pink-400 to-red-400 mb-6">
+                        Want to Know More?
+                    </h2>
+                    <p className="text-lg md:text-xl text-gray-300 mb-8">
+                        Explore detailed information, packages, gallery, and personalized services by visiting our official website.
+                    </p>
 
-    <a
-      href="https://odishaholidays.in/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block bg-gradient-to-r from-yellow-400 via-pink-500 to-red-500 text-black text-lg font-semibold px-8 py-3 rounded-full shadow-md hover:scale-105 hover:shadow-yellow-400/50 transition-all"
-    >
-      Visit Official Website
-    </a>
+                    <a
+                        href="https://odishaholidays.in/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-gradient-to-r from-yellow-400 via-pink-500 to-red-500 text-black text-lg font-semibold px-8 py-3 rounded-full shadow-md hover:scale-105 hover:shadow-yellow-400/50 transition-all"
+                    >
+                        Visit Official Website
+                    </a>
 
-    <p className="mt-6 text-sm text-gray-400">
-      Stay connected and explore Odisha like never before.
-    </p>
-  </div>
-</section>
+                    <p className="mt-6 text-sm text-gray-400">
+                        Stay connected and explore Odisha like never before.
+                    </p>
+                </div>
+            </section>
 
             <Footer />
 
