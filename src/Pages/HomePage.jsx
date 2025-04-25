@@ -38,7 +38,7 @@ const HomePage = () => {
         }
     
         try {
-            const response = await axios.post("http://localhost:4000/api/sendmail", formData, {
+            const response = await axios.post("https://odishaholidaysbackend.onrender.com/api/sendmail", formData, {
                 headers: {
                     "Content-Type": "application/json", // Fixed header key and value
                 },
