@@ -263,7 +263,7 @@ const HomePage = () => {
                                     className="w-12 h-12 rounded-full border-2 border-yellow-400"
                                 />
                                 <div>
-                                    <h4 className="text-lg font-bold text-gray-900">{testimonial.name}</h4>
+                                    <h4 className="text-lg font-bold text-gray-900 font-semibold">{testimonial.name}</h4>
                                     <p className="text-sm text-gray-900">{testimonial.location}</p>
                                 </div>
                             </div>

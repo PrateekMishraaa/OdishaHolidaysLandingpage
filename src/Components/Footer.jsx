@@ -26,19 +26,19 @@ const Footer = () => {
                         <p className='text-sm'>Mr. Amit Dhanda</p>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <IoCallOutline className='text-green-500 text-lg' />
+                        <IoCallOutline className='text-red-600 text-lg' />
                         <a href='' className='text-sm'>+91 9971834101</a>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <IoCallOutline className='text-green-500 text-lg' />
+                        <IoCallOutline className='text-red-600 text-lg' />
                         <p className='text-sm'>+91 8743000609</p>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <IoCallOutline className='text-green-500 text-lg' />
+                        <IoCallOutline className='text-red-600 text-lg' />
                         <p className='text-sm'>+91 8743000613</p>
                     </div>
                     <div className='flex items-center gap-2'>
-                        <IoCallOutline className='text-green-500 text-lg' />
+                        <IoCallOutline className='text-red-600 text-lg' />
                         <p className='text-sm'>+91 8744060002</p>
                     </div>
                     <div className='flex items-center gap-2'>
