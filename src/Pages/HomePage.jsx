@@ -45,7 +45,7 @@ const HomePage = () => {
             Our team of experts is dedicated to providing you with personalized travel itineraries, local insights, and the best accommodations to make your journey truly unforgettable. Join us in discovering the hidden gems of Odisha, from its untouched beaches to its colorful festivals.
           </p>
           <a
-            href="/"
+            href="https://odishaholidays.in/about-odisha-holidays.html"
             className="mt-6 inline-block px-8 py-3 bg-blue-600 text-white font-semibold text-xl rounded-full transition duration-300 hover:bg-blue-700 hover:scale-105"
           >
             Learn More
@@ -77,6 +77,112 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <section className="min-h-screen w-full bg-gradient-to-br from-indigo-900 via-purple-900 to-black px-6 py-12">
+  <div className="text-center mb-12">
+    <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">
+      Popular Destinations
+    </h2>
+    <p className="text-white text-lg md:text-xl mt-4 max-w-2xl mx-auto">
+      Discover the most enchanting places to visit in Odisha that will leave you mesmerized.
+    </p>
+  </div>
+
+  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+    {[
+      {
+        title: "Puri Beach",
+        image: BannerOne,
+        special: true,
+        rating: 4.8,
+      },
+      {
+        title: "Konark Sun Temple",
+        image: BannerTwo,
+        special: false,
+        rating: 4.9,
+      },
+      {
+        title: "Chilika Lake",
+        image: BannerThree,
+        special: false,
+        rating: 4.7,
+      },
+      {
+        title: "Lingaraja Temple",
+        image: BannerFour,
+        special: true,
+        rating: 4.9,
+      },
+      {
+        title: "Hirakud Dam",
+        image: BannerFive,
+        special: false,
+        rating: 4.6,
+      },
+      {
+        title: "Dhauli Shanti Stupa",
+        image: BannerSix,
+        special: false,
+        rating: 4.5,
+      },
+    ].map((dest, index) => (
+      <div
+        key={index}
+        className="relative rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-10 backdrop-blur-md hover:scale-105 transition-transform duration-300 border border-gray-700"
+      >
+        {/* Badge */}
+        {dest.special && (
+          <div className="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 text-xs font-bold rounded-full shadow-lg">
+            Must Visit
+          </div>
+        )}
+
+        <div className="relative">
+          <img
+            src={dest.image}
+            alt={dest.title}
+            className="w-full h-60 object-cover"
+          />
+          {/* Overlay on hover */}
+          <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition duration-300 flex items-center justify-center">
+            <a href='https://odishaholidays.in/' className="px-6 py-2 cursor-pointer bg-white text-black font-semibold rounded-full hover:bg-yellow-400 hover:text-black transition">
+              View More
+            </a>
+          </div>
+        </div>
+
+        <div className="p-4 text-white">
+          <h3 className="text-xl font-bold mb-2 text-center text-gray-900">{dest.title}</h3>
+          <p className="text-sm text-center mb-2 text-gray-900">
+            Explore the timeless beauty and spiritual charm of {dest.title}, one of Odisha’s most iconic places.
+          </p>
+
+          {/* Rating */}
+          <div className="flex justify-center items-center space-x-1">
+            {[...Array(5)].map((_, starIndex) => (
+              <svg
+                key={starIndex}
+                xmlns="http://www.w3.org/2000/svg"
+                className={`h-5 w-5 ${
+                  starIndex < Math.floor(dest.rating)
+                    ? "text-yellow-600"
+                    : "text-gray-800"
+                }`}
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.234 3.794a1 1 0 00.95.69h3.993c.969 0 1.371 1.24.588 1.81l-3.23 2.346a1 1 0 00-.364 1.118l1.234 3.794c.3.921-.755 1.688-1.538 1.118l-3.23-2.346a1 1 0 00-1.176 0l-3.23 2.346c-.783.57-1.838-.197-1.538-1.118l1.234-3.794a1 1 0 00-.364-1.118L2.228 9.22c-.783-.57-.38-1.81.588-1.81h3.993a1 1 0 00.95-.69l1.234-3.794z" />
+              </svg>
+            ))}
+            <span className="text-sm text-gray-800">({dest.rating})</span>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+
     </>
   );
 };
