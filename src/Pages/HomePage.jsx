@@ -47,7 +47,11 @@ const HomePage = () => {
             toast.success("Message sent successfully!");
             // Optionally reset form here
             // setFormData({ name: "", email: "", message: "" });
-    
+                setFormData({
+                    name:"",
+                    email:"",
+                    message:""
+                })
         } catch (error) {
             console.error(error);
             toast.error("Something went wrong");
