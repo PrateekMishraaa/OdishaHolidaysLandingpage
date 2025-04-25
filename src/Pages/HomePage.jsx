@@ -10,6 +10,7 @@ import BannerFive from "../assets/banner5.jpg"
 import BannerSix from "../assets/banner6.jpg";
 import BannerSeven from "../assets/banner7.jpg";
 import BannerEight from "../assets/banner8.jpg";
+import Footer from '../Components/Footer';
 const HomePage = () => {
   return (
     <>
@@ -206,7 +207,7 @@ const HomePage = () => {
     ))}
   </div>
 </section>
-
+    <Footer/>
 
     </>
   );
