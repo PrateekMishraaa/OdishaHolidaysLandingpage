@@ -8,7 +8,8 @@ import BannerThree from "../assets/banner3.jpg";
 import BannerFour from "../assets/banner4.jpg";
 import BannerFive from "../assets/banner5.jpg"
 import BannerSix from "../assets/banner6.jpg";
-
+import BannerSeven from "../assets/banner7.jpg";
+import BannerEight from "../assets/banner8.jpg";
 const HomePage = () => {
   return (
     <>
@@ -35,13 +36,13 @@ const HomePage = () => {
       {/* About Us Section */}
       <section className="min-h-[50vh] w-full bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 p-10">
         <div className="w-full h-auto cursor-pointer bg-black text-blue-900 p-8 rounded-2xl shadow-lg hover:bg-gray-900 hover:text-yellow-400 text-white transition">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500 mb-6">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500 mb-6 font-serif">
             About Odisha Holidays
           </h2>
-          <p className="text-lg md:text-xl leading-relaxed mb-4">
+          <p className="text-lg md:text-xl leading-relaxed mb-4 font-serif">
             Odisha Holidays is your gateway to explore the rich culture, ancient temples, and pristine landscapes of Odisha, India. We offer curated travel experiences, ensuring you get the most out of your visit to this vibrant and historic state. Whether you're looking for spiritual experiences, adventure activities, or cultural immersion, we have something for everyone.
           </p>
-          <p className="text-lg md:text-xl leading-relaxed mb-4">
+          <p className="text-lg md:text-xl leading-relaxed mb-4 font-serif">
             Our team of experts is dedicated to providing you with personalized travel itineraries, local insights, and the best accommodations to make your journey truly unforgettable. Join us in discovering the hidden gems of Odisha, from its untouched beaches to its colorful festivals.
           </p>
           <a
@@ -75,19 +76,43 @@ const HomePage = () => {
           <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
             <img src={BannerSix} alt="Odisha Festival" className="w-full h-full object-cover rounded-2xl" />
           </div>
+          <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src={BannerSeven} alt="Odisha Festival" className="w-full h-full object-cover rounded-2xl" />
+          </div>
+          <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src={BannerEight} alt="Odisha Festival" className="w-full h-full object-cover rounded-2xl" />
+          </div>
         </div>
       </section>
       <section className="min-h-screen w-full bg-gradient-to-br from-indigo-900 via-purple-900 to-black px-6 py-12">
-  <div className="text-center mb-12">
-    <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500">
-      Popular Destinations
-    </h2>
-    <p className="text-white text-lg md:text-xl mt-4 max-w-2xl mx-auto">
-      Discover the most enchanting places to visit in Odisha that will leave you mesmerized.
-    </p>
-  </div>
+      <div className="text-center mb-12">
+  <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-500 font-serif">
+    Popular Destinations
+  </h2>
 
-  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  {/* Decorative underline */}
+  <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-pink-500 mx-auto my-4 rounded-full"></div>
+
+  {/* Subheading */}
+  <h3 className="text-xl md:text-2xl text-white font-light italic mb-2">
+    Journey into the heart of heritage and nature
+  </h3>
+
+  {/* Main paragraph */}
+  <p className="text-white text-lg md:text-xl mt-4 max-w-2xl mx-auto italic">
+    Discover the most enchanting places to visit in Odisha that will leave you mesmerized. 
+    From spiritual sanctuaries and ancient architecture to pristine beaches and serene lakes, 
+    each destination tells a story worth exploring.
+  </p>
+
+  {/* Inspirational travel quote */}
+  <p className="text-sm md:text-base text-gray-300 italic mt-6 max-w-xl mx-auto">
+    "Travel isn’t always about reaching a destination, it's about discovering yourself along the way." – Rakesh
+  </p>
+</div>
+
+
+  <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 font-serif">
     {[
       {
         title: "Puri Beach",
