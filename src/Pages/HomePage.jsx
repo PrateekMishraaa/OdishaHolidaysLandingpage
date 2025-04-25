@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
-import Banner from "../assets/banner.jpg";
+import BannerNine from "../assets/banner9.jpg";
 import About1 from "../assets/about-us.jpg";
 import BannerOne from "../assets/banner2.jpg";
 import BannerTwo from "../assets/banner3.jpg";
@@ -128,7 +128,7 @@ const HomePage = () => {
                         },
                         {
                             title: "Konark Sun Temple",
-                            image: BannerTwo,
+                            image: BannerNine,
                             special: false,
                             rating: 4.9,
                         },
