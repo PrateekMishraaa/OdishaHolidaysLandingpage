@@ -20,22 +20,24 @@ const HomePage = () => {
             <Navbar />
 
             <section
-                className="relative min-h-screen w-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${Banner})` }}
-            >
-                {/* Semi-transparent overlay */}
-                <div className="absolute inset-0 bg-opacity-60 z-0" />
+  className="relative min-h-screen w-full bg-cover bg-center"
+  style={{ backgroundImage: `url(${Banner})` }}
+>
+  {/* Semi-transparent overlay */}
+  <div className="absolute inset-0  bg-opacity-60 z-0" />
 
-                {/* Text Content */}
-                <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-6">
-                    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 px-6 py-4 bg-opacity-80 rounded-3xl w-[85%] sm:w-[70%] md:w-[60%] mt-40 cursor-pointer hover:scale-105 transition-transform duration-300">
-                        Welcome to Odisha Holidays
-                    </h1>
-                    <p className="text-lg md:text-xl max-w-2xl text-white font-serif font-semibold leading-relaxed h-40 w-[80%] md:w-[70%] bg-opacity-80 p-6 rounded-3xl shadow-lg backdrop-blur-md border-4 border-gradient-to-r from-blue-300 to-purple-300 transition-all duration-300 hover:bg-blue-500 hover:border-blue-500">
-                        "Discover the enchanting beauty of Odisha, India – explore its rich cultural heritage, pristine beaches, ancient temples, and vibrant festivals for an unforgettable travel experience."
-                    </p>
-                </div>
-            </section>
+  {/* Text Content */}
+  <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4 sm:px-8">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 px-4 py-2 sm:px-6 sm:py-4 rounded-2xl w-full max-w-3xl transition-transform duration-300 cursor-pointer hover:scale-105">
+      Welcome to Odisha Holidays
+    </h1>
+
+    <p className="text-base sm:text-lg md:text-xl font-serif font-medium leading-relaxed max-w-xl sm:max-w-2xl px-4 py-4  bg-opacity-10 text-white rounded-2xl border border-blue-400 shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-opacity-20">
+      Discover the enchanting beauty of Odisha, India – explore its rich cultural heritage, pristine beaches, ancient temples, and vibrant festivals for an unforgettable travel experience.
+    </p>
+  </div>
+</section>
+
 
             {/* About Us Section */}
             <section className="min-h-[50vh] w-full bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 p-10">
