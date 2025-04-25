@@ -15,9 +15,79 @@ import { PiStudent } from "react-icons/pi";
 import Footer from '../Components/Footer';
 import { MdGroups } from "react-icons/md";
 import { toast, ToastContainer } from 'react-toastify';
+// import { Search, Calendar, User, Clock, ChevronRight } from 'lucide-react';
 import axios from "axios"
 import 'react-toastify/dist/ReactToastify.css';
 const HomePage = () => {
+    // const [activeCategory, setActiveCategory] = useState('All');
+    // const categories = ['All', 'Technology', 'Design', 'Business', 'Lifestyle'];
+
+    // const blogPosts = [
+    //     {
+    //       id: 1,
+    //       title: "The Future of Web Development: What to Expect in 2025",
+    //       excerpt: "Explore the latest trends in web development and discover what technologies will shape the industry in the coming years.",
+    //       author: "Alex Johnson",
+    //       date: "April 20, 2025",
+    //       readTime: "5 min read",
+    //       category: "Technology",
+    //       image: "/api/placeholder/600/400"
+    //     },
+    //     {
+    //       id: 2,
+    //       title: "Designing for Accessibility: Best Practices",
+    //       excerpt: "Learn how to create inclusive designs that work for everyone, improving user experience across all platforms.",
+    //       author: "Samantha Lee",
+    //       date: "April 18, 2025",
+    //       readTime: "4 min read",
+    //       category: "Design",
+    //       image: "/api/placeholder/600/400"
+    //     },
+    //     {
+    //       id: 3,
+    //       title: "Sustainable Business Models for the Digital Age",
+    //       excerpt: "Discover how companies are adapting their business models to meet environmental challenges while staying competitive.",
+    //       author: "Marcus Chen",
+    //       date: "April 15, 2025",
+    //       readTime: "6 min read",
+    //       category: "Business",
+    //       image: "/api/placeholder/600/400"
+    //     },
+    //     {
+    //       id: 4,
+    //       title: "Finding Balance: Digital Wellness in a Connected World",
+    //       excerpt: "Tips and strategies for maintaining digital wellness while staying productive in an always-connected environment.",
+    //       author: "Priya Sharma",
+    //       date: "April 12, 2025",
+    //       readTime: "3 min read",
+    //       category: "Lifestyle",
+    //       image: "/api/placeholder/600/400"
+    //     },
+    //     {
+    //       id: 5,
+    //       title: "The Rise of AI in Content Creation",
+    //       excerpt: "How artificial intelligence is transforming content creation and what it means for creators and consumers alike.",
+    //       author: "David Wilson",
+    //       date: "April 10, 2025",
+    //       readTime: "7 min read",
+    //       category: "Technology",
+    //       image: "/api/placeholder/600/400"
+    //     },
+    //     {
+    //       id: 6,
+    //       title: "Minimalist UX: Less is More",
+    //       excerpt: "Exploring how minimalist design principles can create more effective and engaging user experiences.",
+    //       author: "Emma Rodriguez",
+    //       date: "April 8, 2025",
+    //       readTime: "4 min read",
+    //       category: "Design",
+    //       image: "/api/placeholder/600/400"
+    //     }
+    //   ];
+    //   const filteredPosts = activeCategory === 'All' 
+    //   ? blogPosts 
+    //   : blogPosts.filter(post => post.category === activeCategory);
+  
     const [formData,setFormData] = useState({
     name:"",
     email:"",
@@ -379,6 +449,7 @@ const HomePage = () => {
                     </a>
                 </div>
             </section>
+       
             <section className="min-h-screen w-full bg-gradient-to-br from-[#f5f3ef] to-[#e8e2d6] flex items-center justify-center px-4 py-10">
   <div className="bg-gray-900 shadow-2xl rounded-3xl p-10 w-full max-w-2xl transition-all duration-300 ">
     <h2 className="text-4xl font-extrabold text-center text-white mb-10 font-serif tracking-tight ">
