@@ -20,7 +20,6 @@ const Navbar = () => {
     );
   }, { scope: container });
 
-  // Animation for mobile menu
   useGSAP(() => {
     if (isMenuOpen) {
       gsap.fromTo(
@@ -44,84 +43,74 @@ const Navbar = () => {
     { name: "About Us", href: "/about" },
     { name: "Gallery", href: "/gallery" },
     { name: "Contact Us", href: "/contact" },
-    // { name: "Book Now", href: "#book", highlight: true }
   ];
 
   return (
-    <header className="w-full py-4 px-4 shadow-md bg-white" ref={container}>
-      <div className="container mx-auto">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <div className="nav-item flex items-center">
-           <a href="/">
-           <img
+    <header className="w-full py-3 px-4 shadow-md bg-white fixed top-0 left-0 z-50" ref={container}>
+      <div className="max-w-7xl mx-auto flex justify-between items-center">
+        
+        {/* Logo */}
+        <div className="nav-item flex items-center">
+          <a href="/">
+            <img
               src={Logo}
               alt="Logo"
-              className="h-8 md:h-10 object-contain"
+              className="h-10 sm:h-12 md:h-14 object-contain"
             />
-           </a>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            {navItems.map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                className={`nav-item font-serif font-semibold transition-colors ${
-                  item.highlight 
-                    ? "text-white bg-blue-700 hover:bg-blue-900 px-4 py-2 rounded" 
-                    : "text-orange-600 hover:text-blue-900 hover:underline transition"
-                }`}
-              >
-                {item.name}
-              </a>
-            ))}
-
-            {/* Temple Icon */}
-            <div className="nav-item ml-2">
-              <GiByzantinTemple className="h-8 w-8 text-[#964B00] cursor-pointer hover:text-[#7B3F00] transition" />
-            </div>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button 
-            className="nav-item md:hidden text-blue-700 focus:outline-none" 
-            onClick={toggleMenu}
-          >
-            {isMenuOpen ? (
-              <IoClose className="h-6 w-6" />
-            ) : (
-              <IoMenu className="h-6 w-6" />
-            )}
-          </button>
+          </a>
         </div>
 
-        {/* Mobile Menu */}
-        <div 
-          ref={menuRef} 
-          className={`md:hidden overflow-hidden opacity-0 h-0`}
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              className="nav-item text-orange-600 hover:text-blue-900 hover:underline font-serif font-semibold text-lg transition"
+            >
+              {item.name}
+            </a>
+          ))}
+
+          {/* Temple Icon */}
+          <div className="nav-item ml-4">
+            <GiByzantinTemple className="h-8 w-8 text-[#964B00] cursor-pointer hover:text-[#7B3F00] transition" />
+          </div>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="nav-item md:hidden text-blue-700 focus:outline-none" 
+          onClick={toggleMenu}
         >
-          <div className="flex flex-col space-y-4 pt-4 pb-2">
-            {navItems.map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                className={`font-serif font-semibold py-2 ${
-                  item.highlight 
-                    ? "text-white bg-blue-700 rounded text-center" 
-                    : "text-blue-700 border-b border-gray-200"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </a>
-            ))}
-            
-            {/* Temple Icon - Mobile */}
-            <div className="flex justify-center py-2">
-              <GiByzantinTemple className="h-8 w-8 text-[#964B00]" />
-            </div>
+          {isMenuOpen ? (
+            <IoClose className="h-8 w-8" />
+          ) : (
+            <IoMenu className="h-8 w-8" />
+          )}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      <div 
+        ref={menuRef} 
+        className="md:hidden overflow-hidden opacity-0 h-0 transition-all duration-500 ease-in-out"
+      >
+        <div className="flex flex-col space-y-5 pt-6 pb-4 bg-white shadow-lg">
+          {navItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              onClick={() => setIsMenuOpen(false)}
+              className="text-center text-blue-700 font-serif font-semibold text-lg py-2 border-b border-gray-200"
+            >
+              {item.name}
+            </a>
+          ))}
+
+          {/* Temple Icon Mobile */}
+          <div className="flex justify-center pt-4">
+            <GiByzantinTemple className="h-10 w-10 text-[#964B00]" />
           </div>
         </div>
       </div>
