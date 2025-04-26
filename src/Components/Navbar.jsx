@@ -41,7 +41,7 @@ const Navbar = () => {
     { name: "Attractions", href: "/attractions" },
     { name: "Destinations", href: "/destinations" },
     { name: "About Us", href: "/about" },
-    // { name: "Gallery", href: "#gallery" },
+    { name: "Gallery", href: "/gallery" },
     { name: "Contact Us", href: "/contact" },
     // { name: "Book Now", href: "#book", highlight: true }
   ];

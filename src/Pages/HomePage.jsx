@@ -70,9 +70,9 @@ const HomePage = () => {
 
                 
                 <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4 sm:px-8">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-purple-700 to-pink-800 px-4 py-2 sm:px-6 sm:py-4 rounded-2xl w-full max-w-3xl transition-transform duration-300 cursor-pointer hover:scale-105">
-                        Welcome to Odisha Holidays
-                    </h1>
+                <p className="text-base sm:text-4xl md:text-4xl font-serif font-medium leading-relaxed max-w-xl sm:max-w-2xl px-4 py-4  bg-opacity-10 text-white rounded-2xl border border-blue-400 shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-opacity-20 mb-2">
+                      Welcome To Odisha Holidays
+                    </p>
 
                     <p className="text-base sm:text-lg md:text-xl font-serif font-medium leading-relaxed max-w-xl sm:max-w-2xl px-4 py-4  bg-opacity-10 text-white rounded-2xl border border-blue-400 shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-opacity-20">
                         Discover the enchanting beauty of Odisha, India – explore its rich cultural heritage, pristine beaches, ancient temples, and vibrant festivals for an unforgettable travel experience.
@@ -102,35 +102,7 @@ const HomePage = () => {
                 </div>
 
               
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
-                    <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-                        <img src={About1} alt="Odisha Beach" className="w-full h-full object-cover rounded-2xl" />
-                    </div>
-                    <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-                        <img src={BannerOne} alt="Odisha Temple" className="w-full h-full object-cover rounded-2xl" />
-                    </div>
-                    <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-                        <img src={BannerTwo} alt="Odisha Festival" className="w-full h-full object-cover rounded-2xl" />
-                    </div>
-                    <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-                        <img src={BannerThree} alt="Odisha Beach" className="w-full h-full object-cover rounded-2xl" />
-                    </div>
-                    <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-                        <img src={BannerFour} alt="Odisha Temple" className="w-full h-full object-cover rounded-2xl" />
-                    </div>
-                    <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-                        <img src={BannerFive} alt="Odisha Festival" className="w-full h-full object-cover rounded-2xl" />
-                    </div>
-                    <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-                        <img src={BannerSix} alt="Odisha Festival" className="w-full h-full object-cover rounded-2xl" />
-                    </div>
-                    <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-                        <img src={BannerSeven} alt="Odisha Festival" className="w-full h-full object-cover rounded-2xl" />
-                    </div>
-                    <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-                        <img src={BannerEight} alt="Odisha Festival" className="w-full h-full object-cover rounded-2xl" />
-                    </div>
-                </div>
+              
             </section>
             <section className="min-h-screen w-full bg-gradient-to-br from-indigo-900 via-purple-900 to-black px-6 py-12">
                 <div className="text-center mb-12">
@@ -253,67 +225,7 @@ const HomePage = () => {
                     ))}
                 </div>
             </section>
-            <section className="bg[#f3ece3]gradient-to-b from-black via-gray-900 to-black py-16 px-6 text-white font-serif">
-                <div className="text-center mb-12">
-                    <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-800 to-pink-900">
-                        What Our Travelers Say
-                    </h2>
-                    <p className="text-lg md:text-xl mt-4 max-w-2xl mx-auto text-gray-900">
-                        Hear from some of our delighted explorers who’ve uncovered the magic of Odisha with us.
-                    </p>
-                    <p className="text-md md:text-lg mt-3 max-w-3xl mx-auto text-gray-900 italic">
-                        Whether it’s the spiritual serenity of ancient temples or the golden sunsets over quiet beaches, these real stories reflect the unforgettable moments our travelers experienced. Their words speak louder than ours.
-                    </p>
-                    <p className="text-md md:text-base mt-6 text-gray-900">
-                        We believe in crafting journeys that are more than just vacations — they’re lifelong memories.
-                    </p>
-                </div>
-
-
-                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                    {[
-                        {
-                          
-                            location: "Delhi, India",
-                            feedback:
-                                "An unforgettable experience! From the serenity of Chilika Lake to the grandeur of Konark Sun Temple — everything was perfectly arranged.",
-                            
-                        },
-                        {
-                        
-                            location: "Mumbai, India",
-                            feedback:
-                                "I never imagined Odisha had so much beauty to offer. The entire trip was smooth, scenic, and absolutely memorable!",
-                          
-                        },
-                        {
-                          
-                            location: "Ahmedabad, India",
-                            feedback:
-                                "Highly recommended! The guides were knowledgeable, the stays were cozy, and I felt connected to the roots of Indian culture.",
-                            
-                        }
-                    ].map((testimonial, index) => (
-                        <div
-                            key={index}
-                            className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-gray-700 hover:scale-105 transition-transform duration-300"
-                        >
-                            <div className="flex items-center gap-4 mb-4">
-                                <img
-                                    src={testimonial.img}
-                                    alt={testimonial.name}
-                                    className="w-12 h-12 rounded-full border-2 border-yellow-400"
-                                />
-                                <div>
-                                    <h4 className="text-lg font-bold text-gray-900 font-semibold">{testimonial.name}</h4>
-                                    <p className="text-sm text-gray-900">{testimonial.location}</p>
-                                </div>
-                            </div>
-                            <p className="text-gray-900 italic">“{testimonial.feedback}”</p>
-                        </div>
-                    ))}
-                </div>
-            </section>
+            
 
             <section className="min-h-screen w-full bg-gradient-to-br from-indigo-900 via-purple-900 to-black font-serif text-white px-6 py-16">
                 <div className="text-center mb-12">
@@ -376,6 +288,67 @@ const HomePage = () => {
                     <a href='https://odishaholidays.in/services-odisha-holidays.html' className="bg-gradient-to-r from-pink-500 to-yellow-400 text-black cursor-pointer font-semibold px-6 py-3 rounded-full shadow-lg hover:shadow-pink-500/40 transition-all">
                         Discover All Services
                     </a>
+                </div>
+            </section>
+            <section className="bg[#f3ece3]gradient-to-b from-black via-gray-900 to-black py-16 px-6 text-white font-serif">
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-800 to-pink-900">
+                        What Our Travelers Say
+                    </h2>
+                    <p className="text-lg md:text-xl mt-4 max-w-2xl mx-auto text-gray-900">
+                        Hear from some of our delighted explorers who’ve uncovered the magic of Odisha with us.
+                    </p>
+                    <p className="text-md md:text-lg mt-3 max-w-3xl mx-auto text-gray-900 italic">
+                        Whether it’s the spiritual serenity of ancient temples or the golden sunsets over quiet beaches, these real stories reflect the unforgettable moments our travelers experienced. Their words speak louder than ours.
+                    </p>
+                    <p className="text-md md:text-base mt-6 text-gray-900">
+                        We believe in crafting journeys that are more than just vacations — they’re lifelong memories.
+                    </p>
+                </div>
+
+
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    {[
+                        {
+                          
+                            location: "Delhi, India",
+                            feedback:
+                                "An unforgettable experience! From the serenity of Chilika Lake to the grandeur of Konark Sun Temple — everything was perfectly arranged.",
+                            
+                        },
+                        {
+                        
+                            location: "Mumbai, India",
+                            feedback:
+                                "I never imagined Odisha had so much beauty to offer. The entire trip was smooth, scenic, and absolutely memorable!",
+                          
+                        },
+                        {
+                          
+                            location: "Ahmedabad, India",
+                            feedback:
+                                "Highly recommended! The guides were knowledgeable, the stays were cozy, and I felt connected to the roots of Indian culture.",
+                            
+                        }
+                    ].map((testimonial, index) => (
+                        <div
+                            key={index}
+                            className="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-gray-700 hover:scale-105 transition-transform duration-300"
+                        >
+                            <div className="flex items-center gap-4 mb-4">
+                                <img
+                                    src={testimonial.img}
+                                    alt={testimonial.name}
+                                    className="w-12 h-12 rounded-full border-2 border-yellow-400"
+                                />
+                                <div>
+                                    <h4 className="text-lg font-bold text-gray-900 font-semibold">{testimonial.name}</h4>
+                                    <p className="text-sm text-gray-900">{testimonial.location}</p>
+                                </div>
+                            </div>
+                            <p className="text-gray-900 italic">“{testimonial.feedback}”</p>
+                        </div>
+                    ))}
                 </div>
             </section>
 
