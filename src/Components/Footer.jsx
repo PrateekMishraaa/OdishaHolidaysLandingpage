@@ -8,7 +8,7 @@ import { FaPinterest,FaYoutube } from "react-icons/fa";
 import { LuInstagram } from "react-icons/lu";
 const Footer = () => {
     return (
-        <footer className='w-full bg-orange-700 text-white font-serif px-8 py-10'>
+        <footer className='w-full bg-[#63d7ec] text-white font-serif px-8 py-10'>
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
 
                 {/* Contact Us */}
