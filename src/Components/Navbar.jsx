@@ -70,7 +70,7 @@ const Navbar = () => {
                 className={`nav-item font-serif font-semibold transition-colors ${
                   item.highlight 
                     ? "text-white bg-blue-700 hover:bg-blue-900 px-4 py-2 rounded" 
-                    : "text-blue-700 hover:text-blue-900 hover:underline transition"
+                    : "text-orange-600 hover:text-blue-900 hover:underline transition"
                 }`}
               >
                 {item.name}

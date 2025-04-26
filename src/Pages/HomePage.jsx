@@ -9,7 +9,7 @@ import BannerFour from "../assets/banner4.jpg";
 import BannerFive from "../assets/banner5.jpg"
 import BannerSix from "../assets/banner6.jpg";
 import BannerSeven from "../assets/banner7.jpg";
-import BannerEight from "../assets/banner8.jpg";
+import BannerEight from "../assets/newbanner.jpg";
 import { MdFlight } from "react-icons/md";
 import { PiStudent } from "react-icons/pi";
 import Footer from '../Components/Footer';
