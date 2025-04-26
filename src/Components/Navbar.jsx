@@ -46,7 +46,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="w-full py-3 px-4 shadow-md bg-white fixed top-0 left-0 z-50" ref={container}>
+    <header className="w-full py-4 px-6 md:px-10 shadow-md bg-white fixed top-0 left-0 z-50" ref={container}>
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         
         {/* Logo */}
@@ -55,26 +55,26 @@ const Navbar = () => {
             <img
               src={Logo}
               alt="Logo"
-              className="h-10 sm:h-12 md:h-14 object-contain"
+              className="h-10 sm:h-12 md:h-14 lg:h-16 object-contain"
             />
           </a>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-10">
           {navItems.map((item, index) => (
             <a
               key={index}
               href={item.href}
-              className="nav-item text-orange-600 hover:text-blue-900 hover:underline font-serif font-semibold text-lg transition"
+              className="nav-item text-orange-600 hover:text-blue-900 hover:underline font-serif font-semibold text-base lg:text-lg xl:text-xl transition"
             >
               {item.name}
             </a>
           ))}
 
           {/* Temple Icon */}
-          <div className="nav-item ml-4">
-            <GiByzantinTemple className="h-8 w-8 text-[#964B00] cursor-pointer hover:text-[#7B3F00] transition" />
+          <div className="nav-item ml-2 lg:ml-6">
+            <GiByzantinTemple className="h-8 w-8 lg:h-10 lg:w-10 text-[#964B00] cursor-pointer hover:text-[#7B3F00] transition" />
           </div>
         </div>
 
@@ -96,7 +96,7 @@ const Navbar = () => {
         ref={menuRef} 
         className="md:hidden overflow-hidden opacity-0 h-0 transition-all duration-500 ease-in-out"
       >
-        <div className="flex flex-col space-y-5 pt-6 pb-4 bg-white shadow-lg">
+        <div className="flex flex-col space-y-4 pt-6 pb-6 px-4 bg-white shadow-lg">
           {navItems.map((item, index) => (
             <a
               key={index}
