@@ -39,11 +39,11 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Attractions", href: "/attractions" },
-    { name: "Destinations", href: "#destinations" },
-    { name: "About Us", href: "#about" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact Us", href: "#contact" },
-    { name: "Book Now", href: "#book", highlight: true }
+    { name: "Destinations", href: "/destinations" },
+    { name: "About Us", href: "/about" },
+    // { name: "Gallery", href: "#gallery" },
+    { name: "Contact Us", href: "/contact" },
+    // { name: "Book Now", href: "#book", highlight: true }
   ];
 
   return (
@@ -52,11 +52,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="nav-item flex items-center">
-            <img
+           <a href="/">
+           <img
               src={Logo}
               alt="Logo"
               className="h-8 md:h-10 object-contain"
             />
+           </a>
           </div>
 
           {/* Desktop Navigation */}
