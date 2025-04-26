@@ -15,119 +15,48 @@ import { PiStudent } from "react-icons/pi";
 import Footer from '../Components/Footer';
 import { MdGroups } from "react-icons/md";
 import { toast, ToastContainer } from 'react-toastify';
-// import { Search, Calendar, User, Clock, ChevronRight } from 'lucide-react';
 import axios from "axios"
 import 'react-toastify/dist/ReactToastify.css';
 const HomePage = () => {
-    // const [activeCategory, setActiveCategory] = useState('All');
-    // const categories = ['All', 'Technology', 'Design', 'Business', 'Lifestyle'];
-
-    // const blogPosts = [
-    //     {
-    //       id: 1,
-    //       title: "The Future of Web Development: What to Expect in 2025",
-    //       excerpt: "Explore the latest trends in web development and discover what technologies will shape the industry in the coming years.",
-    //       author: "Alex Johnson",
-    //       date: "April 20, 2025",
-    //       readTime: "5 min read",
-    //       category: "Technology",
-    //       image: "/api/placeholder/600/400"
-    //     },
-    //     {
-    //       id: 2,
-    //       title: "Designing for Accessibility: Best Practices",
-    //       excerpt: "Learn how to create inclusive designs that work for everyone, improving user experience across all platforms.",
-    //       author: "Samantha Lee",
-    //       date: "April 18, 2025",
-    //       readTime: "4 min read",
-    //       category: "Design",
-    //       image: "/api/placeholder/600/400"
-    //     },
-    //     {
-    //       id: 3,
-    //       title: "Sustainable Business Models for the Digital Age",
-    //       excerpt: "Discover how companies are adapting their business models to meet environmental challenges while staying competitive.",
-    //       author: "Marcus Chen",
-    //       date: "April 15, 2025",
-    //       readTime: "6 min read",
-    //       category: "Business",
-    //       image: "/api/placeholder/600/400"
-    //     },
-    //     {
-    //       id: 4,
-    //       title: "Finding Balance: Digital Wellness in a Connected World",
-    //       excerpt: "Tips and strategies for maintaining digital wellness while staying productive in an always-connected environment.",
-    //       author: "Priya Sharma",
-    //       date: "April 12, 2025",
-    //       readTime: "3 min read",
-    //       category: "Lifestyle",
-    //       image: "/api/placeholder/600/400"
-    //     },
-    //     {
-    //       id: 5,
-    //       title: "The Rise of AI in Content Creation",
-    //       excerpt: "How artificial intelligence is transforming content creation and what it means for creators and consumers alike.",
-    //       author: "David Wilson",
-    //       date: "April 10, 2025",
-    //       readTime: "7 min read",
-    //       category: "Technology",
-    //       image: "/api/placeholder/600/400"
-    //     },
-    //     {
-    //       id: 6,
-    //       title: "Minimalist UX: Less is More",
-    //       excerpt: "Exploring how minimalist design principles can create more effective and engaging user experiences.",
-    //       author: "Emma Rodriguez",
-    //       date: "April 8, 2025",
-    //       readTime: "4 min read",
-    //       category: "Design",
-    //       image: "/api/placeholder/600/400"
-    //     }
-    //   ];
-    //   const filteredPosts = activeCategory === 'All' 
-    //   ? blogPosts 
-    //   : blogPosts.filter(post => post.category === activeCategory);
-  
-    const [formData,setFormData] = useState({
-    name:"",
-    email:"",
-    message:""
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: ""
     })
-    const handleChange = (e)=>{
-        setFormData({...formData,[e.target.name]:e.target.value})
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
     }
     console.log(handleChange);
 
 
     const handleSubmit = async (e) => {
-        e.preventDefault(); // Fixed typo from prevantDefault to preventDefault
-    
+        e.preventDefault(); 
+
         if (!formData.name || !formData.email || !formData.message) {
             toast.error("All fields are required");
-            return; // Added return to stop execution if fields are missing
+            return;
         }
-    
+
         try {
             const response = await axios.post("https://odishaholidaysbackend.onrender.com/api/sendmail", formData, {
                 headers: {
-                    "Content-Type": "application/json", // Fixed header key and value
+                    "Content-Type": "application/json", 
                 },
             });
-    
+
             toast.success("Message sent successfully!");
-            // Optionally reset form here
-            // setFormData({ name: "", email: "", message: "" });
-                setFormData({
-                    name:"",
-                    email:"",
-                    message:""
-                })
+           
+            setFormData({
+                name: "",
+                email: "",
+                message: ""
+            })
         } catch (error) {
             console.error(error);
             toast.error("Something went wrong");
         }
     };
-    
+
     return (
         <>
             <Navbar />
@@ -136,10 +65,10 @@ const HomePage = () => {
                 className="relative min-h-screen w-full bg-cover bg-center"
                 style={{ backgroundImage: `url(${BannerEight})` }}
             >
-                {/* Semi-transparent overlay */}
+                
                 <div className="absolute inset-0  bg-opacity-60 z-0" />
 
-                {/* Text Content */}
+                
                 <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4 sm:px-8">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-700 via-purple-700 to-pink-800 px-4 py-2 sm:px-6 sm:py-4 rounded-2xl w-full max-w-3xl transition-transform duration-300 cursor-pointer hover:scale-105">
                         Welcome to Odisha Holidays
@@ -152,7 +81,7 @@ const HomePage = () => {
             </section>
 
 
-            {/* About Us Section */}
+            
             <section className="min-h-[50vh] w-full bg-[#f3ece3] p-10">
                 <div className="w-full h-auto cursor-pointer bg-black text-blue-900 p-8 rounded-2xl shadow-lg hover:bg-gray-900 hover:text-yellow-400 text-white transition">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-gradient bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500 mb-6 font-serif">
@@ -172,7 +101,7 @@ const HomePage = () => {
                     </a>
                 </div>
 
-                {/* Image Grid */}
+              
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
                     <div className="w-full h-[300px] overflow-hidden rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
                         <img src={About1} alt="Odisha Beach" className="w-full h-full object-cover rounded-2xl" />
@@ -209,25 +138,24 @@ const HomePage = () => {
                         Popular Destinations
                     </h2>
 
-                    {/* Decorative underline */}
                     <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-pink-500 mx-auto my-4 rounded-full"></div>
 
-                    {/* Subheading */}
+
                     <h3 className="text-xl md:text-2xl text-white font-light italic mb-2">
                         Journey into the heart of heritage and nature
                     </h3>
 
-                    {/* Main paragraph */}
+
                     <p className="text-white text-lg md:text-xl mt-4 max-w-2xl mx-auto italic">
                         Discover the most enchanting places to visit in Odisha that will leave you mesmerized.
                         From spiritual sanctuaries and ancient architecture to pristine beaches and serene lakes,
                         each destination tells a story worth exploring.
                     </p>
 
-                    {/* Inspirational travel quote */}
                     <p className="text-sm md:text-base text-gray-300 italic mt-6 max-w-xl mx-auto">
                         "Travel isn’t always about reaching a destination, it's about discovering yourself along the way." – Rakesh
                     </p>
+
                 </div>
 
 
@@ -252,6 +180,7 @@ const HomePage = () => {
                             rating: 4.7,
                         },
                         {
+                            
                             title: "Lingaraja Temple",
                             image: BannerFour,
                             special: true,
@@ -274,7 +203,7 @@ const HomePage = () => {
                             key={index}
                             className="relative rounded-xl overflow-hidden shadow-lg bg-white bg-opacity-10 backdrop-blur-md hover:scale-105 transition-transform duration-300 border border-gray-700"
                         >
-                            {/* Badge */}
+
                             {dest.special && (
                                 <div className="absolute top-4 left-4 bg-yellow-500 text-black px-3 py-1 text-xs font-bold rounded-full shadow-lg">
                                     Must Visit
@@ -287,7 +216,7 @@ const HomePage = () => {
                                     alt={dest.title}
                                     className="w-full h-60 object-cover"
                                 />
-                                {/* Overlay on hover */}
+
                                 <div className="absolute inset-0 bg-black bg-opacity-40 opacity-0 hover:opacity-100 transition duration-300 flex items-center justify-center">
                                     <a href='https://odishaholidays.in/' className="px-6 py-2 cursor-pointer bg-white text-black font-semibold rounded-full hover:bg-yellow-400 hover:text-black transition">
                                         View More
@@ -301,7 +230,7 @@ const HomePage = () => {
                                     Explore the timeless beauty and spiritual charm of {dest.title}, one of Odisha’s most iconic places.
                                 </p>
 
-                                {/* Rating */}
+
                                 <div className="flex justify-center items-center space-x-1">
                                     {[...Array(5)].map((_, starIndex) => (
                                         <svg
@@ -344,25 +273,25 @@ const HomePage = () => {
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {[
                         {
-                            // name: "Priya Sharma",
+                          
                             location: "Delhi, India",
                             feedback:
                                 "An unforgettable experience! From the serenity of Chilika Lake to the grandeur of Konark Sun Temple — everything was perfectly arranged.",
-                            // img: "https://randomuser.me/api/portraits/women/44.jpg"
+                            
                         },
                         {
-                            // name: "Rahul Mehta",
+                        
                             location: "Mumbai, India",
                             feedback:
                                 "I never imagined Odisha had so much beauty to offer. The entire trip was smooth, scenic, and absolutely memorable!",
-                            // img: "https://randomuser.me/api/portraits/men/32.jpg"
+                          
                         },
                         {
-                            // name: "Anjali Desai",
+                          
                             location: "Ahmedabad, India",
                             feedback:
                                 "Highly recommended! The guides were knowledgeable, the stays were cozy, and I felt connected to the roots of Indian culture.",
-                            // img: "https://randomuser.me/api/portraits/women/68.jpg"
+                            
                         }
                     ].map((testimonial, index) => (
                         <div
@@ -449,66 +378,66 @@ const HomePage = () => {
                     </a>
                 </div>
             </section>
-       
+
             <section className="min-h-screen w-full bg-gradient-to-br from-[#f5f3ef] to-[#e8e2d6] flex items-center justify-center px-4 py-10">
-  <div className="bg-gray-900 shadow-2xl rounded-3xl p-10 w-full max-w-2xl transition-all duration-300 ">
-    <h2 className="text-4xl font-extrabold text-center text-white mb-10 font-serif tracking-tight ">
-      Get in Touch
-    </h2>
-    <form onSubmit={handleSubmit} className="space-y-6 ">
-      <div>
-        <label htmlFor="name" className="block text-sm text-white font-semibold font-serif mb-1">
-          Full Name
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full px-5 py-3 rounded-xl border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#c89f70] focus:border-[#c89f70] transition-all duration-300 font-medium"
-          placeholder="John Doe"
-        />
-      </div>
-      <div>
-        <label htmlFor="email" className="block text-sm text-white font-semibold font-serif mb-1">
-          Email Address
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full px-5 py-3 rounded-xl border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#c89f70] focus:border-[#c89f70] transition-all duration-300 font-medium"
-          placeholder="example@domain.com"
-        />
-      </div>
-      <div>
-        <label htmlFor="message" className="block text-sm text-white font-semibold font-serif mb-1">
-          Your Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows="5"
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full px-5 py-3 rounded-xl border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#c89f70] focus:border-[#c89f70] transition-all duration-300 font-medium resize-none"
-          placeholder="Let us know how we can help you..."
-        ></textarea>
-      </div>
-      <div className="flex justify-center pt-4">
-        <button
-          type="submit"
-          className="bg-[#0d3b66] hover:bg-[#092e4d] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out font-serif text-lg"
-        >
-          Send Message
-        </button>
-      </div>
-    </form>
-  </div>
-</section>
+                <div className="bg-gray-900 shadow-2xl rounded-3xl p-10 w-full max-w-2xl transition-all duration-300 ">
+                    <h2 className="text-4xl font-extrabold text-center text-white mb-10 font-serif tracking-tight ">
+                        Get in Touch
+                    </h2>
+                    <form onSubmit={handleSubmit} className="space-y-6 ">
+                        <div>
+                            <label htmlFor="name" className="block text-sm text-white font-semibold font-serif mb-1">
+                                Full Name
+                            </label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                className="w-full px-5 py-3 rounded-xl border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#c89f70] focus:border-[#c89f70] transition-all duration-300 font-medium"
+                                placeholder="John Doe"
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="email" className="block text-sm text-white font-semibold font-serif mb-1">
+                                Email Address
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                className="w-full px-5 py-3 rounded-xl border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#c89f70] focus:border-[#c89f70] transition-all duration-300 font-medium"
+                                placeholder="example@domain.com"
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="message" className="block text-sm text-white font-semibold font-serif mb-1">
+                                Your Message
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                value={formData.message}
+                                onChange={handleChange}
+                                className="w-full px-5 py-3 rounded-xl border border-gray-300 bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-[#c89f70] focus:border-[#c89f70] transition-all duration-300 font-medium resize-none"
+                                placeholder="Let us know how we can help you..."
+                            ></textarea>
+                        </div>
+                        <div className="flex justify-center pt-4">
+                            <button
+                                type="submit"
+                                className="bg-[#0d3b66] hover:bg-[#092e4d] text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 ease-in-out font-serif text-lg"
+                            >
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
 
 
             <section className="w-full bg-gradient-to-r from-purple-900 via-indigo-900 to-black py-16 px-6 text-white font-serif">
@@ -534,9 +463,9 @@ const HomePage = () => {
                     </p>
                 </div>
             </section>
-                
+
             <Footer />
-                    <ToastContainer/>
+            <ToastContainer />
         </>
     );
 };
