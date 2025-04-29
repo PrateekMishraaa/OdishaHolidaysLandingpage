@@ -39,10 +39,12 @@ const Navbar = () => {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Attractions", href: "/attractions" },
+    {name:"Packages",href:"/packages"},
     { name: "Destinations", href: "/destinations" },
-    { name: "About Us", href: "/about" },
+    { name: "About ", href: "/about" },
     { name: "Gallery", href: "/gallery" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Contact ", href: "/contact" },
+    
   ];
 
   return (
@@ -66,7 +68,7 @@ const Navbar = () => {
             <a
               key={index}
               href={item.href}
-              className="nav-item text-orange-600 hover:text-blue-900 hover:underline font-serif font-semibold text-base lg:text-lg xl:text-xl transition"
+              className="nav-item text-orange-600 mr-10 hover:text-blue-900 hover:underline font-serif font-semibold text-base lg:text-lg xl:text-xl transition"
             >
               {item.name}
             </a>
