@@ -25,12 +25,12 @@ const ContactUs = () => {
             }
     
             try {
-                const response = await axios.post("https://odishaholidaysbackend.onrender.com/api/sendmail", formData, {
+                const response = await axios.post("https://odishaholidaysbackend-1.onrender.com/api/sendmail", formData, {
                     headers: {
                         "Content-Type": "application/json", 
                     },
                 });
-    
+                    console.log(response)
                 toast.success("Message sent successfully!");
                
                 setFormData({

@@ -36,7 +36,7 @@ const Packages = () => {
         { title: "PURI GANGASAGAR TOUR PACKAGES",image:Chilika, date: "05 Nights/06 Days Tour" },
         { title: "TRIBAL TOUR OF ODISHA", image:Dance, date: "09 Nights/10 Days Tour" },
         { title: "GOLDEN TRIANGLE TOUR PACKAGES OF ODISHA", image:Daringbadi, date: "02 Nights/03 Days Tour" },
-        { title: "VARANASI, PRAYAGRAJ AND AYODHYA SHREE RAM LALA JANMBHOOMI TOUR", image:Honeymoon, date: "07 Nights/08 Days Tour" },
+        // { title: "VARANASI, PRAYAGRAJ AND AYODHYA SHREE RAM LALA JANMBHOOMI TOUR", image:Honeymoon, date: "07 Nights/08 Days Tour" },
         { title: "WILDLIFE TOUR PACKAGES ODISHA", image:Jagannath, date: "06 Nights/07 Days Tour" },
         { title: "PILGRIMAGE TOUR OF PURI JAGANNATH DHAM, GANGASAGAR AND BAIDYANATH DHAM", image:Janambhumi, date: "08 Nights/09 Days Tour" },
         { title: "ODISHA HONEYMOON TOUR PACKAGES", image:Kalyani, date: "04 Nights/05 Days Tour" },
